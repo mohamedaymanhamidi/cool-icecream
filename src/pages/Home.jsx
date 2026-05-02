@@ -1,42 +1,61 @@
 import { Link } from "react-router-dom";
+import "./Home.css";
 
 export default function Home() {
   return (
-    <div className="container">
+    <div className="home">
 
-      <h1 style={{ fontSize: "40px" }}>
-        🍦 Cool Ice Cream Truck
-      </h1>
+      {/* HERO SECTION */}
+      <section className="hero">
+        <div className="bubble-bg"></div>
 
-      <p style={{ fontSize: "18px" }}>
-        The MOST FUN ice cream experience on wheels 🚚✨
-      </p>
+        <h1 className="title">
+          🍦 Cool Ice Cream Truck
+        </h1>
 
-      {/* Hero Card */}
-      <div className="card">
-        <h2>🌊 Catch Us Today!</h2>
-        <p>Find our truck near beaches & parks</p>
+        <p className="subtitle">
+          Dive into the sweetest underwater ice cream world 🌊✨
+        </p>
 
-        <Link to="/locations">
-          <button className="btn">📍 Track the Truck</button>
+        <div className="hero-buttons">
+          <Link to="/locations">
+            <button className="btn">📍 Find the Truck</button>
+          </Link>
+
+          <Link to="/menu">
+            <button className="btn secondary">🍓 Explore Flavors</button>
+          </Link>
+        </div>
+
+        {/* floating icons */}
+        <div className="float ice1">🍦</div>
+        <div className="float ice2">🍧</div>
+        <div className="float ice3">🍭</div>
+      </section>
+
+      {/* FEATURES */}
+      <section className="features">
+        <div className="card">🌊 Bikini Bottom Vibes</div>
+        <div className="card">🚚 Real Moving Ice Cream Truck</div>
+        <div className="card">🍓 Fresh Daily Flavors</div>
+      </section>
+
+      {/* STORY */}
+      <section className="story">
+        <h2>🏝️ Our Story</h2>
+        <p>
+          A magical ice cream truck inspired by ocean adventures, summer beaches,
+          and cartoon-style fun for kids & families.
+        </p>
+      </section>
+
+      {/* CTA */}
+      <section className="cta">
+        <h2>Ready for a sweet adventure?</h2>
+        <Link to="/contact">
+          <button className="btn">📞 Contact Us</button>
         </Link>
-      </div>
-
-      {/* Menu highlight */}
-      <div className="card">
-        <h2>🔥 Top Flavors</h2>
-        <p>🍓 Strawberry Splash • 🍫 Chocolate Wave • 🌈 Rainbow Sundae</p>
-
-        <Link to="/menu">
-          <button className="btn">View Full Menu</button>
-        </Link>
-      </div>
-
-      {/* Social proof */}
-      <div className="card">
-        <h2>💬 People Love Us</h2>
-        <p>"Best ice cream in town!" ⭐⭐⭐⭐⭐</p>
-      </div>
+      </section>
 
     </div>
   );

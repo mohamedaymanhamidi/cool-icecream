@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import logo from "../assets/fav1.png";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -9,8 +10,14 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="nav-container">
 
-        {/* Logo */}
-        <h1 className="logo">🍦 Cool Ice</h1>
+        {/* Logo */}  
+<Link to="/" className="logo">
+  <img src={logo} alt="Cool Ice Logo" />
+  <span className="logo-text">
+    <span className="cool">Cool</span>{" "}
+    <span className="ice">Ice</span>
+  </span>
+</Link>
 
         {/* Hamburger */}
         <div className="hamburger" onClick={() => setOpen(!open)}>
