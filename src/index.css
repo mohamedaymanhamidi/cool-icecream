@@ -52,3 +52,38 @@ body {
 .card:hover {
   transform: translateY(-5px) scale(1.02);
 }
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #00c6ff, #ffd93d);
+  padding: 12px 20px;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-secondary {
+  background: rgba(255,255,255,0.2);
+  padding: 12px 20px;
+  border-radius: 12px;
+  color: white;
+} 
+
+.glass {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.glass-strong {
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  padding: 30px;
+}
