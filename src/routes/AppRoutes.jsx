@@ -5,6 +5,7 @@ import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Locations from "../pages/Locations";
 import Gallery from "../pages/Gallery";
+import Events from "../pages/Events";
 
 export default function AppRoutes() {
   return (
@@ -15,6 +16,7 @@ export default function AppRoutes() {
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/events" element={<Events />} />
     </Routes>
   );
 }

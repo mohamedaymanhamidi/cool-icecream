@@ -1,40 +1,66 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import "./Navbar.css";
-import logo from "../assets/fav1.png";
+import { useEffect,useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import './Navbar.css'
+import logo from '../assets/fav1.png'
 
-export default function Navbar() {
-  const [open, setOpen] = useState(false);
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const location = useLocation()
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+
+
+  const navLinks = [
+    { path: '/', label: 'Home' },
+    { path: '/menu', label: 'Menu' },
+    { path: '/events', label: 'Events' },
+    { path: '/gallery', label: 'Gallery' },
+    { path: '/about', label: 'About' },
+    { path: '/contact', label: 'Contact' },
+  ]
 
   return (
-    <nav className="navbar">
-      <div className="nav-container">
-
-        {/* Logo */}  
-<Link to="/" className="logo">
-  <img src={logo} alt="Cool Ice Logo" />
-  <span className="logo-text">
-    <span className="cool">Cool</span>{" "}
-    <span className="ice">Ice</span>
-  </span>
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+      <div className="navbar-container">
+<Link to="/" className="navbar-logo">
+  <div className="logo-icon">
+    <img src={logo} alt="Cool Ice Cream Logo" />
+  </div>
+  <span className="logo-text">Cool Ice Cream</span>
 </Link>
-
-        {/* Hamburger */}
-        <div className="hamburger" onClick={() => setOpen(!open)}>
-          ☰
+        <div className={`nav-links ${isOpen ? 'open' : ''}`}>
+          {navLinks.map((link) => (
+            <Link
+  key={link.path}
+  to={link.path}
+  onClick={() => setIsOpen(false)}
+  className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
+>
+  {link.label}
+</Link>
+          ))}
         </div>
 
-        {/* Links */}
-        <div className={`nav-links ${open ? "active" : ""}`}>
-          <Link to="/" onClick={() => setOpen(false)}>Home</Link>
-          <Link to="/menu" onClick={() => setOpen(false)}>Menu</Link>
-          <Link to="/locations" onClick={() => setOpen(false)}>Locations</Link>
-          <Link to="/gallery" onClick={() => setOpen(false)}>Gallery</Link>
-          <Link to="/about" onClick={() => setOpen(false)}>About</Link>
-          <Link to="/contact" onClick={() => setOpen(false)}>Contact</Link>
-        </div>
-
+        <button
+          className={`hamburger ${isOpen ? 'open' : ''}`}
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </nav>
-  );
+  )
 }
+
+export default Navbar
