@@ -184,16 +184,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ===== CTA ===== */}
-      <section className="cta-section">
-        <div className="cta-content glass-strong">
-          <h2>Ready to Dive In?</h2>
-          <div className="cta-buttons">
-            <Link to="/contact" className="btn-primary">📅 Book Now</Link>
-            <Link to="/events" className="btn-secondary">🗺️ Track Our Truck</Link>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

@@ -88,21 +88,7 @@ const Footer = () => {
             </div>   */}
           </div>
 
-          {/* Newsletter */}
-          <div className="footer-newsletter">
-            <h4>Stay Cool!</h4>
-            <p>Get updates on new flavors and truck locations!</p>
-            <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="email"
-                placeholder="Your email..."
-                className="newsletter-input"
-              />
-              <button type="submit" className="newsletter-btn">
-                🍦
-              </button>
-            </form>
-          </div>
+          
         </div>
 
         <div className="footer-bottom">
