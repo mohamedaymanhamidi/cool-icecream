@@ -54,6 +54,8 @@
 
 /* ===== BUTTONS ===== */
 .hero-buttons {
+      flex-wrap: nowrap;
+        white-space: nowrap;
   display: flex;
   gap: 15px;
   justify-content: center;

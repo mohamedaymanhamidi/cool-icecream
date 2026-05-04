@@ -16,8 +16,8 @@ body {
   --purple: #c77dff;
   --purple-light: #e0aaff;
   --white: #ffffff;
-  --glass-bg: rgba(255, 255, 255, 0.08);
-  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-bg: rgba(255, 255, 255, 0.18); /* was 0.08 */
+  --glass-border: rgba(255, 255, 255, 0.25);
   --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   --font-display: 'Fredoka One', cursive;
   --font-body: 'Nunito', sans-serif;
@@ -176,8 +176,18 @@ main {
 .btn-primary:hover::before {
   left: 100%;
 }
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+}
 
 .btn-secondary {
+        flex-wrap: nowrap;
+        white-space: nowrap;
   display: inline-flex;
   align-items: center;
   gap: 8px;

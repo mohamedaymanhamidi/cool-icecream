@@ -115,7 +115,7 @@ const Home = () => {
 
           <div className="hero-buttons">
             <Link to="/menu" className="btn-primary">🍦 See Our Menu</Link>
-            <Link to="/events" className="btn-secondary">📍 Find Our Truck</Link>
+            <Link to="/events" className="btn-secondary">🎉 View Our Events</Link>
           </div>
 
           {/* Floating ice creams */}
@@ -143,7 +143,7 @@ const Home = () => {
         <div className="flavors-grid">
           {popularFlavors.map((flavor, i) => (
             <div key={i} className="flavor-card">
-              <div className="flavor-emoji" style={{ background: `${flavor.color}20` }}>
+              <div className="flavor-emoji" >
                 {flavor.emoji}
               </div>
               <h3>{flavor.name}</h3>

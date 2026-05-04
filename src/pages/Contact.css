@@ -29,7 +29,8 @@
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 1fr;
+  justify-items: center;
   gap: 48px;
   align-items: start;
 }
@@ -121,12 +122,15 @@
   align-items: center;
   gap: 4px;
   padding: 16px;
-  background: var(--glass-bg);
+  /* background: var(--glass-bg); */
   backdrop-filter: blur(10px);
-  border: 1px solid var(--glass-border);
+  /* border: 1px solid var(--glass-border); */
   border-radius: 16px;
   text-decoration: none;
   transition: all 0.3s ease;
+    background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
 
 .social-card:hover {
@@ -329,6 +333,7 @@
 @media (max-width: 900px) {
   .contact-grid {
     grid-template-columns: 1fr;
+  justify-items: center;
   }
 
   .social-grid {

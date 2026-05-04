@@ -1,27 +1,10 @@
-import { useState } from 'react'
+
 import './Contact.css'
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  })
-  const [submitted, setSubmitted] = useState(false)
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
-  }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    setSubmitted(true)
-    setTimeout(() => {
-      setSubmitted(false)
-      setFormData({ name: '', email: '', subject: '', message: '' })
-    }, 3000)
-  }
+
 
   const contactInfo = [
     { icon: '📍', label: 'Address', value: '123 Ocean Drive, Bikini Bay' },
@@ -83,80 +66,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="contact-form-panel glass">
-            <h2>Send Us a Message</h2>
-            {submitted ? (
-              <div className="form-success">
-                <div className="success-icon">🎉</div>
-                <h3>Message Sent!</h3>
-                <p>Thanks for reaching out! We will get back to you soon.</p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="contact-form">
-                <div className="form-group">
-                  <label htmlFor="name">Your Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Enter your name..."
-                    required
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="email">Email Address</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="your@email.com"
-                    required
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="subject">Subject</label>
-                  <select
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                  >
-                    <option value="">Select a topic...</option>
-                    <option value="booking">Book Our Truck</option>
-                    <option value="menu">Menu Question</option>
-                    <option value="feedback">Feedback</option>
-                    <option value="partnership">Partnership</option>
-                    <option value="other">Something Else</option>
-                  </select>
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="message">Your Message</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Tell us what's on your mind..."
-                    rows="5"
-                    required
-                  />
-                </div>
-
-                <button type="submit" className="form-submit-btn">
-                  <span>📨</span> Send Message
-                </button>
-              </form>
-            )}
           </div>
-        </div>
       </section>
 
       {/* Map placeholder section */}

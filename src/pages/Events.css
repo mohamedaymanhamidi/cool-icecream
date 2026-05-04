@@ -1,6 +1,7 @@
 .events-hero {
   padding: 140px 24px 60px;
   text-align: center;
+  
 }
 
 .events-hero-content {
@@ -15,6 +16,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 12px;
+  
 }
 
 .events-subtitle {
@@ -83,15 +85,18 @@
 }
 
 .event-card {
-  background: var(--glass-bg);
+  /* background: var(--glass-bg); */
   backdrop-filter: blur(10px);
-  border: 1px solid var(--glass-border);
+  /* border: 1px solid var(--glass-border); */
   border-radius: 24px;
   padding: 32px;
   position: relative;
   overflow: hidden;
   transition: all 0.4s ease;
   animation: scale-in 0.5s ease-out backwards;
+    background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
 
 .event-card:hover {
@@ -108,12 +113,15 @@
   top: 16px;
   right: 16px;
   padding: 6px 14px;
-  background: linear-gradient(135deg, var(--yellow), var(--pink));
+  /* background: linear-gradient(135deg, var(--yellow), var(--pink)); */
   border-radius: 50px;
   font-size: 0.8rem;
   font-weight: 700;
   color: var(--ocean-deep);
-  box-shadow: 0 4px 15px rgba(255, 217, 61, 0.3);
+  /* box-shadow: 0 4px 15px rgba(255, 217, 61, 0.3); */
+    background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
 
 .event-icon {

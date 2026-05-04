@@ -1,146 +1,55 @@
 import { useState } from 'react'
 import './Menu.css'
 
+// toppings (KEEP SAME)
+import trixLogo from '../assets/trix.png'
+import frootLoopsLogo from '../assets/Frootloops.png'
+import fruityPebblesLogo from '../assets/fruitypebbles.png'
+import ctcLogo from '../assets/Cinnamon.png'
+import mmsLogo from '../assets/mm.png'
+
+// CATEGORY IMAGES (YOU REPLACE THESE)
+import pic1 from '../assets/cones.png' // cones
+import pic2 from '../assets/wafflecones.png' // waffle
+import pic3 from '../assets/sundaes.png' // sundaes
+import pic4 from '../assets/bubbletea.png' // bubble
+import pic5 from '../assets/icedandfl.png' // drinks
+import pic6 from '../assets/smoothies.png' // smoothies
+import pic7 from '../assets/milkshake.png' // milks
+import pic8 from '../assets/snowice.png' // snowballs
+import pic9 from '../assets/slushies.png' // slushies
+
 const Menu = () => {
-  const [activeCategory, setActiveCategory] = useState('all')
+  const [activeCategory, setActiveCategory] = useState('cones')
 
   const categories = [
-    { id: 'all', label: 'All Treats', icon: '🍦' },
-    { id: 'cones', label: 'Cones', icon: '🍦' },
-    { id: 'cups', label: 'Cups', icon: '🍨' },
-    { id: 'specials', label: 'Specials', icon: '✨' },
-    { id: 'drinks', label: 'Drinks', icon: '🥤' },
+    { id: 'cones', label: 'Cones', icon: '🍦', image: pic1 },
+    { id: 'wafflecones', label: 'Waffle Cones', icon: '🍦', image: pic2 },
+    { id: 'sundaes', label: 'Sundaes', icon: '🍨', image: pic3 },
+    { id: 'bubble', label: 'Bubble Tea', icon: '🧋', image: pic4 },
+    { id: 'drinks', label: 'Ice Drinks & Floats', icon: '🥤', image: pic5 },
+    { id: 'smoothies', label: 'Smoothies', icon: '🥤', image: pic6 },
+    { id: 'milks', label: 'Milkshakes', icon: '🥛', image: pic7 },
+    { id: 'snowballs', label: 'Snowballs & Ice', icon: '❄️', image: pic8 },
+    { id: 'slushies', label: 'Slushies', icon: '🧊', image: pic9 },
+    { id: 'top', label: 'Topping', icon: '✨' },
   ]
 
-  const menuItems = [
-    {
-      id: 1,
-      name: 'Ocean Berry Blast',
-      category: 'cones',
-      price: '$4.50',
-      description: 'Blue raspberry swirl with real berry chunks and ocean-blue sprinkles',
-      color: '#00c6ff',
-      emoji: '🫐',
-      popular: true,
-    },
-    {
-      id: 2,
-      name: 'Coral Crunch',
-      category: 'cones',
-      price: '$4.75',
-      description: 'Strawberry ice cream with crunchy coral-colored candy bits',
-      color: '#ff6b9d',
-      emoji: '🍓',
-      popular: true,
-    },
-    {
-      id: 3,
-      name: 'Seaweed Swirl',
-      category: 'cones',
-      price: '$4.25',
-      description: 'Mint chocolate chip with a green swirl and chocolate seaweed shapes',
-      color: '#00f5ff',
-      emoji: '🥝',
-      popular: false,
-    },
-    {
-      id: 4,
-      name: 'Treasure Vanilla',
-      category: 'cones',
-      price: '$3.99',
-      description: 'Premium vanilla with edible gold glitter and caramel treasure pieces',
-      color: '#ffd93d',
-      emoji: '✨',
-      popular: true,
-    },
-    {
-      id: 5,
-      name: 'Deep Sea Chocolate',
-      category: 'cups',
-      price: '$5.00',
-      description: 'Rich dark chocolate with sea salt caramel and fudge chunks',
-      color: '#8B4513',
-      emoji: '🍫',
-      popular: false,
-    },
-    {
-      id: 6,
-      name: 'Bubblegum Bay',
-      category: 'cups',
-      price: '$4.50',
-      description: 'Classic bubblegum flavor with popping candy surprise inside',
-      color: '#ff6b9d',
-      emoji: '🫧',
-      popular: false,
-    },
-    {
-      id: 7,
-      name: 'Mermaid Magic',
-      category: 'specials',
-      price: '$6.50',
-      description: 'Layered rainbow ice cream with edible glitter and a mermaid tail cookie',
-      color: '#c77dff',
-      emoji: '🧜‍♀️',
-      popular: true,
-    },
-    {
-      id: 8,
-      name: 'Neptune\'s Neapolitan',
-      category: 'specials',
-      price: '$5.50',
-      description: 'Three-layer treat: ocean blue, coral pink, and sandy vanilla',
-      color: '#00c6ff',
-      emoji: '🌊',
-      popular: false,
-    },
-    {
-      id: 9,
-      name: 'Jellyfish Jiggle',
-      category: 'specials',
-      price: '$5.75',
-      description: 'Wobbly jelly-inspired dessert with fruit pearls and gummy tentacles',
-      color: '#ff6b9d',
-      emoji: '🪼',
-      popular: false,
-    },
-    {
-      id: 10,
-      name: 'Tidal Wave Shake',
-      category: 'drinks',
-      price: '$5.99',
-      description: 'Creamy vanilla shake with blue curacao swirl and whipped cream waves',
-      color: '#00c6ff',
-      emoji: '🌊',
-      popular: true,
-    },
-    {
-      id: 11,
-      name: 'Coral Cooler',
-      category: 'drinks',
-      price: '$4.99',
-      description: 'Refreshing strawberry lemonade with floating fruit ice cubes',
-      color: '#ff6b9d',
-      emoji: '🍹',
-      popular: false,
-    },
-    {
-      id: 12,
-      name: 'Submarine Float',
-      category: 'drinks',
-      price: '$5.25',
-      description: 'Root beer float with a yellow submarine-shaped cookie on top',
-      color: '#ffd93d',
-      emoji: '🚢',
-      popular: false,
-    },
+  // TOPPINGS ONLY
+  const toppings = [
+    { id: 1, name: 'Trix Topping', image: trixLogo },
+    { id: 2, name: 'Froot Loops', image: frootLoopsLogo },
+    { id: 3, name: 'Fruity Pebbles', image: fruityPebblesLogo },
+    { id: 4, name: 'Cinnamon Toast Crunch', image: ctcLogo },
+    { id: 5, name: 'M&M', image: mmsLogo },
   ]
 
-  const filteredItems = activeCategory === 'all'
-    ? menuItems
-    : menuItems.filter(item => item.category === activeCategory)
+  const activeCat = categories.find(c => c.id === activeCategory)
 
   return (
     <div className="menu-page">
+
+      {/* HERO */}
       <section className="menu-hero">
         <div className="menu-hero-content">
           <h1 className="menu-title">Our Magical Menu</h1>
@@ -148,58 +57,47 @@ const Menu = () => {
         </div>
       </section>
 
-      <section className="menu-section section">
-        <div className="category-filter">
-          {categories.map((cat) => (
-            <button
-              key={cat.id}
-              className={`category-btn ${activeCategory === cat.id ? 'active' : ''}`}
-              onClick={() => setActiveCategory(cat.id)}
-            >
-              <span>{cat.icon}</span>
-              {cat.label}
-            </button>
-          ))}
-        </div>
+      {/* FILTER */}
+      <div className="category-filter">
+        {categories.map((cat) => (
+          <button
+            key={cat.id}
+            className={`category-btn ${activeCategory === cat.id ? 'active' : ''}`}
+            onClick={() => setActiveCategory(cat.id)}
+          >
+            <span>{cat.icon}</span>
+            {cat.label}
+          </button>
+        ))}
+      </div>
 
+      {/* ===== CATEGORY IMAGE (ALL EXCEPT TOPPING) ===== */}
+      {activeCategory !== 'top' && (
+        <div className="menu-image-wrapper">
+          <img
+            src={activeCat.image}
+            alt={activeCat.label}
+            className="menu-big-image"
+          />
+        </div>
+      )}
+
+      {/* ===== TOPPINGS GRID (UNCHANGED STYLE) ===== */}
+      {activeCategory === 'top' && (
         <div className="menu-grid">
-          {filteredItems.map((item, i) => (
-            <div
-              key={item.id}
-              className={`menu-card ${item.popular ? 'popular' : ''}`}
-              style={{ animationDelay: `${i * 0.08}s` }}
-            >
-              {item.popular && (
-                <div className="popular-badge">
-                  <span>🔥 Popular</span>
-                </div>
-              )}
+          {toppings.map((item) => (
+            <div key={item.id} className="menu-card">
               <div className="menu-card-visual">
-                <div
-                  className="menu-emoji-container"
-                  style={{ background: `${item.color}15` }}
-                >
-                  <span className="menu-emoji">{item.emoji}</span>
-                </div>
-                <div
-                  className="menu-glow"
-                  style={{ background: item.color }}
-                />
+                <img src={item.image} alt={item.name} className="menu-logo" />
               </div>
               <div className="menu-card-info">
-                <div className="menu-card-header">
-                  <h3>{item.name}</h3>
-                  <span className="menu-price">{item.price}</span>
-                </div>
-                <p className="menu-description">{item.description}</p>
-                <button className="menu-add-btn">
-                  <span>🛒</span> Add to Order
-                </button>
+                <h2>{item.name}</h2>
               </div>
             </div>
           ))}
         </div>
-      </section>
+      )}
+
     </div>
   )
 }
