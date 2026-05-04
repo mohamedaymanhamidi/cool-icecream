@@ -33,8 +33,9 @@ const Navbar = () => {
 <Link to="/" className="navbar-logo">
   <div className="logo-icon">
     <img src={logo} alt="Cool Ice Cream Logo" />
+    
   </div>
-  <span className="logo-text">Cool Ice Cream</span>
+  <span className="logo-text">Cool Ice Cream & More</span>
 </Link>
         <div className={`nav-links ${isOpen ? 'open' : ''}`}>
           {navLinks.map((link) => (

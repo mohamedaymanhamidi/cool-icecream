@@ -76,6 +76,7 @@ body {
         white-space: nowrap;
 }
 .btn-secondary {
+    text-decoration: none;
         flex-wrap: nowrap;
         white-space: nowrap;
   background: rgba(255,255,255,0.2);

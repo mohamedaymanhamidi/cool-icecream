@@ -1,6 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Home.css'
+import pic1 from '../assets/con.png'
+import pic2 from '../assets/wflc.png'
+import pic3 from '../assets/iced.png'
+import pic4 from '../assets/mlks2.png'
 
 const Home = () => {
   const heroRef = useRef(null)
@@ -64,31 +68,31 @@ const Home = () => {
 
   const testimonials = [
     {
-      name: 'Sarah M.',
+      name: 'Amelia M.',
       role: 'Happy Parent',
       text: 'My kids absolutely love when the Cool Ice Cream Truck rolls up! The flavors are incredible and the staff is so friendly.',
       rating: 5,
     },
     {
-      name: 'Jake T.',
+      name: 'Henry H.',
       role: 'Birthday Party Host',
       text: 'Best birthday party ever! The truck showed up right on time and the kids went crazy for the Ocean Berry Blast.',
       rating: 5,
     },
     {
-      name: 'Emily R.',
+      name: 'Oliver R.',
       role: 'Ice Cream Lover',
       text: 'As an adult who loves ice cream, this truck delivers premium quality with a fun twist. The Coral Crunch is my favorite!',
       rating: 5,
     },
   ]
 
-  const popularFlavors = [
-    { name: 'Ocean Berry Blast', color: '#00c6ff', emoji: '🫐' },
-    { name: 'Coral Crunch', color: '#ff6b9d', emoji: '🍓' },
-    { name: 'Seaweed Swirl', color: '#00f5ff', emoji: '🥝' },
-    { name: 'Treasure Vanilla', color: '#ffd93d', emoji: '✨' },
-  ]
+const popularFlavors = [
+  { name: 'Ocean Berry Blast', image: pic1 },
+  { name: 'Coral Crunch', image: pic2 },
+  { name: 'Seaweed Swirl', image: pic3 },
+  { name: 'Treasure Vanilla', image: pic4 },
+]
 
   return (
     <div className="home-page">
@@ -141,13 +145,9 @@ const Home = () => {
       <section className="flavors-preview section">
         <h2 className="section-title">Fan Favorites</h2>
         <div className="flavors-grid">
-          {popularFlavors.map((flavor, i) => (
-            <div key={i} className="flavor-card">
-              <div className="flavor-emoji" >
-                {flavor.emoji}
-              </div>
-              <h3>{flavor.name}</h3>
-            </div>
+          {popularFlavors.map((flavor) => (
+              <img src={flavor.image} alt={flavor.name} className="flavor-img" />
+          
           ))}
         </div>
       </section>

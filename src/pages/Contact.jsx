@@ -10,7 +10,6 @@ const Contact = () => {
     { icon: '📍', label: 'Address', value: '123 Ocean Drive, Bikini Bay' },
     { icon: '📞', label: 'Phone', value: '(555) 123-4567' },
     { icon: '✉️', label: 'Email', value: 'hello@coolicecream.com' },
-    { icon: '🕐', label: 'Hours', value: 'Mon-Sun: 10AM - 8PM' },
   ]
 
   const socialLinks = [
