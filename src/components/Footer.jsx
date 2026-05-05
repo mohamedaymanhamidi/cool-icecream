@@ -72,16 +72,16 @@ const Footer = () => {
             <h4>Find Us</h4>
             <div className="contact-item">
               <span className="contact-icon">📍</span>
-              <span>123 Ocean Drive, Bikini Bay</span>
+              <span>Washington, D.C.</span>
             </div>
             <div className="contact-item">
               <span className="contact-icon">📞</span>
-              <span>(555) 123-4567</span>
+              <span>(703) 930-5517</span>
             </div>
-            <div className="contact-item">
+            {/* <div className="contact-item">
               <span className="contact-icon">✉️</span>
               <span>hello@coolicecream.com</span>
-            </div>
+            </div> */}
           {/* <div className="contact-item">
               <span className="contact-icon">🕐</span>
               <span>Mon-Sun: 10AM - 8PM</span>

@@ -81,11 +81,11 @@ Special birthday sundae for the guest of honor`,
               <div className="event-content">
                 <h3>{event.title}</h3>
 
-                <div className="event-meta">
+                {/* <div className="event-meta">
                   <span>📅 {event.date}</span>
                   <span>🕐 {event.time}</span>
                   <span>📍 {event.location}</span>
-                </div>
+                </div> */}
 
                 <p>{event.description}</p>
 
