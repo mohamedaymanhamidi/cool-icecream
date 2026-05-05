@@ -65,9 +65,7 @@
   align-items: center;
   gap: 16px;
   padding: 16px 20px;
-  background: var(--glass-bg);
   backdrop-filter: blur(10px);
-  border: 1px solid var(--glass-border);
   border-radius: 16px;
   transition: all 0.3s ease;
 }
@@ -120,17 +118,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  padding: 16px;
-  /* background: var(--glass-bg); */
-  backdrop-filter: blur(10px);
-  /* border: 1px solid var(--glass-border); */
-  border-radius: 16px;
+  gap: 6px;
+  padding: 18px;
+
+  /* 🔥 WHITE GLASS BACKGROUND */
+  background: rgba(255, 255, 255, 0.15);
+
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+
+  /* soft white border */
+  border: 5px solid rgba(255, 255, 255, 0.3);
+
+  border-radius: 18px;
+
+  /* depth */
+  box-shadow: 
+    0 10px 30px rgba(0,0,0,0.2),
+    inset 0 1px 0 rgba(255,255,255,0.4);
+
   text-decoration: none;
   transition: all 0.3s ease;
-    background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
 
 .social-card:hover {
@@ -192,7 +200,7 @@
 .form-group textarea {
   padding: 14px 18px;
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--glass-border);
+  /* border: 1px solid var(--glass-border); */
   border-radius: 14px;
   color: var(--white);
   font-family: var(--font-body);
