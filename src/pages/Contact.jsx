@@ -1,4 +1,4 @@
-import { FaInstagram, FaTiktok, FaFacebookF, FaLinkedinIn, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa'
+import { FaEnvelope,FaInstagram, FaTiktok, FaFacebookF, FaLinkedinIn, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa'
 
 import './Contact.css'
 
@@ -7,6 +7,7 @@ const Contact = () => {
   const contactInfo = [
     { icon: <FaMapMarkerAlt />, label: 'Address', value: 'Washington, D.C.' },
     { icon: <FaPhoneAlt />, label: 'Phone', value: '(703) 930-5517' },
+      { icon: <FaEnvelope />, label: 'Email', value: 'hello@coolicecream.com' },
   ]
 
   const socialLinks = [

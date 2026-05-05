@@ -78,10 +78,10 @@ const Footer = () => {
               <span className="contact-icon">📞</span>
               <span>(703) 930-5517</span>
             </div>
-            {/* <div className="contact-item">
+            <div className="contact-item">
               <span className="contact-icon">✉️</span>
-              <span>hello@coolicecream.com</span>
-            </div> */}
+              <span>info@cool-icecream.com</span>
+            </div>
           {/* <div className="contact-item">
               <span className="contact-icon">🕐</span>
               <span>Mon-Sun: 10AM - 8PM</span>
