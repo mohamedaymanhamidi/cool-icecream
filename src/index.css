@@ -104,16 +104,18 @@ body {
 
 /* ===== SECONDARY BUTTON ===== */
 .btn-secondary {
-  background: rgba(192, 16, 16, 0.12);
-  /* backdrop-filter: blur(12px); */
-  padding: 16px 28px;
+ background: linear-gradient(135deg, #00c6ff, #ffd93d);
+  padding: 16px 32px;
   border-radius: 50px;
-  color: white;
-  font-weight: 700;
-  font-size: 1rem;
+  color: #002b45;
+  font-weight: 800;
+  font-size: 1.05rem;
   text-decoration: none;
-  border: 1px solid rgba(255,255,255,0.25);
+  display: inline-block;
+  box-shadow: 0 8px 25px rgba(0, 198, 255, 0.35);
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .btn-secondary:hover {
