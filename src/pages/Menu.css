@@ -175,7 +175,7 @@ html, body {
 .topping-cta {
   display: flex;
   justify-content: center;
-  margin-top: -20px; /* pulls it closer to image */
+  margin-top: 20px;   /* positive space */
   margin-bottom: 40px;
 }
 
