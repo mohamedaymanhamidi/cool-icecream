@@ -172,6 +172,44 @@ html, body {
   right: 16px;
   z-index: 2;
 }
+.topping-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: -20px; /* pulls it closer to image */
+  margin-bottom: 40px;
+}
+
+.topping-btn {
+  padding: 14px 28px;
+
+  /* 🔥 glass style */
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50px;
+
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  box-shadow: 
+    0 10px 30px rgba(0,0,0,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.3);
+}
+.topping-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+
+  background: linear-gradient(135deg, var(--yellow), var(--pink));
+
+  border: none;
+
+  box-shadow: 0 12px 35px rgba(255, 107, 157, 0.4);
+}
 
 .popular-badge span {
   display: inline-flex;

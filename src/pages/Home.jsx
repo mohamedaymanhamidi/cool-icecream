@@ -43,28 +43,28 @@ const Home = () => {
   }))
 )
 
-  const features = [
-    {
-      icon: '🍦',
-      title: 'Magical Flavors',
-      desc: 'Over 50 unique underwater-inspired ice cream flavors made with real ocean-fresh ingredients!',
-    },
-    {
-      icon: '🚚',
-      title: 'Mobile Truck',
-      desc: 'Our colorful truck brings the party to your neighborhood, school, or special event!',
-    },
-    {
-      icon: '🌊',
-      title: 'Eco-Friendly',
-      desc: 'We use biodegradable packaging and support ocean conservation with every scoop!',
-    },
-    {
-      icon: '🎉',
-      title: 'Party Ready',
-      desc: 'Book us for birthdays, weddings, corporate events, and any celebration!',
-    },
-  ]
+const features = [
+  {
+    icon: '🍦',
+    title: 'Premium Quality Ice Cream',
+    desc: 'We serve rich, creamy ice cream made with high-quality ingredients for a consistently smooth and delicious experience.',
+  },
+  {
+    icon: '🚚',
+    title: 'Fully Mobile Service',
+    desc: 'Our ice cream truck comes directly to your location, making it easy to bring great treats to any neighborhood or event.',
+  },
+  {
+    icon: '✨',
+    title: 'Customizable Treats',
+    desc: 'From cones to sundaes, personalize your order with a variety of toppings, sauces, and flavor combinations.',
+  },
+  {
+    icon: '🎉',
+    title: 'Perfect for Events',
+    desc: 'Ideal for birthdays, school functions, private parties, and corporate events — we handle the treats so you can enjoy the moment.',
+  },
+]
 
   const testimonials = [
     {

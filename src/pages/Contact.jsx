@@ -1,4 +1,4 @@
-import { FaEnvelope,FaInstagram, FaTiktok, FaFacebookF, FaLinkedinIn, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa'
+import { FaEnvelope,FaInstagram, FaFacebookF, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa'
 
 import './Contact.css'
 

@@ -1,23 +1,29 @@
 import { useState } from 'react'
 import './Menu.css'
 
-// toppings (KEEP SAME)
+// existing toppings
 import trixLogo from '../assets/trix.png'
 import frootLoopsLogo from '../assets/Frootloops.png'
 import fruityPebblesLogo from '../assets/fruitypebbles.png'
 import ctcLogo from '../assets/Cinnamon.png'
 import mmsLogo from '../assets/mm.png'
 
-// CATEGORY IMAGES (YOU REPLACE THESE)
-import pic1 from '../assets/cones.png' // cones
-import pic2 from '../assets/wafflecones.png' // waffle
-import pic3 from '../assets/sundaes.png' // sundaes
-import pic4 from '../assets/bubbletea.png' // bubble
-import pic5 from '../assets/icedandfl.png' // drinks
-import pic6 from '../assets/smoothies.png' // smoothies
-import pic7 from '../assets/milkshake.png' // milks
-import pic8 from '../assets/snowice.png' // snowballs
-import pic9 from '../assets/slushies.png' // slushies
+// 🆕 NEW TOPPING IMAGES (REPLACE THESE FILES)
+import top1 from '../assets/pnt.png' // peanuts
+import top2 from '../assets/oreo.png' // oreo
+import top3 from '../assets/chcsp.png' // chocolate sprinkles
+import top4 from '../assets/spr.png' // rainbow sprinkles
+
+// CATEGORY IMAGES
+import pic1 from '../assets/cones.png'
+import pic2 from '../assets/wafflecones.png'
+import pic3 from '../assets/sundaes.png'
+import pic4 from '../assets/bubbletea.png'
+import pic5 from '../assets/icedandfl.png'
+import pic6 from '../assets/smoothies.png'
+import pic7 from '../assets/milkshake.png'
+import pic8 from '../assets/snowice.png'
+import pic9 from '../assets/slushies.png'
 
 const Menu = () => {
   const [activeCategory, setActiveCategory] = useState('cones')
@@ -35,13 +41,18 @@ const Menu = () => {
     { id: 'top', label: 'Topping', icon: '✨' },
   ]
 
-  // TOPPINGS ONLY
   const toppings = [
     { id: 1, name: 'Trix Topping', image: trixLogo },
     { id: 2, name: 'Froot Loops', image: frootLoopsLogo },
     { id: 3, name: 'Fruity Pebbles', image: fruityPebblesLogo },
     { id: 4, name: 'Cinnamon Toast Crunch', image: ctcLogo },
     { id: 5, name: 'M&M', image: mmsLogo },
+
+    // 🆕 NEW TOPPINGS
+    { id: 6, name: 'Peanuts', image: top1 },
+    { id: 7, name: 'Oreo Crumble', image: top2 },
+    { id: 8, name: 'Chocolate Sprinkles', image: top3 },
+    { id: 9, name: 'Rainbow Sprinkles', image: top4 },
   ]
 
   const activeCat = categories.find(c => c.id === activeCategory)
@@ -71,7 +82,7 @@ const Menu = () => {
         ))}
       </div>
 
-      {/* ===== CATEGORY IMAGE (ALL EXCEPT TOPPING) ===== */}
+      {/* CATEGORY IMAGE */}
       {activeCategory !== 'top' && (
         <div className="menu-image-wrapper">
           <img
@@ -82,7 +93,22 @@ const Menu = () => {
         </div>
       )}
 
-      {/* ===== TOPPINGS GRID (UNCHANGED STYLE) ===== */}
+      {/* CTA BUTTON */}
+      {(activeCategory === 'wafflecones' || activeCategory === 'sundaes') && (
+        <div className="topping-cta">
+          <button
+            className="topping-btn"
+            onClick={() => {
+              setActiveCategory('top')
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+            }}
+          >
+            ✨ Customize with Toppings
+          </button>
+        </div>
+      )}
+
+      {/* TOPPINGS GRID */}
       {activeCategory === 'top' && (
         <div className="menu-grid">
           {toppings.map((item) => (
