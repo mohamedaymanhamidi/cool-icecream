@@ -58,13 +58,27 @@ body {
   padding: 60px 20px;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .btn-primary,
+  .btn-secondary {
+    width: 90%;
+    max-width: 320px;
+    text-align: center;
+    font-size: 0.95rem;
+    padding: 14px 20px;
+  }
+}
 .hero-buttons {
   display: flex;
-  gap: 18px;
+  gap: 12px;
   justify-content: center;
-  margin-top: 30px;
-  flex-wrap: wrap;
+  margin-top: 20px;
+  flex-wrap: wrap; /* allow stacking */
 }
 
 /* ===== PRIMARY BUTTON (MAIN CTA) ===== */
