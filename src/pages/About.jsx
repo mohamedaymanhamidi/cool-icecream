@@ -1,37 +1,37 @@
 import './About.css'
 
 const About = () => {
-  const milestones = [
-    { year: '2021', title: 'The Beginning', desc: 'Started with a dream and a single ice cream truck', emoji: '🚚' },
-    { year: '2022', title: 'First Festival', desc: 'Served over 5,000 scoops at the Summer Beach Bash', emoji: '🏖️' },
-    { year: '2023', title: 'New Flavors', desc: 'Introduced our signature underwater-themed menu', emoji: '🍦' },
-    { year: '2024', title: 'Community Love', desc: 'Voted Best Mobile Dessert in Bikini Bay', emoji: '🏆' },
-    { year: '2025', title: 'Going Green', desc: 'Switched to 100% biodegradable packaging', emoji: '🌱' },
-    { year: '2026', title: '5 Years Strong', desc: 'Celebrating half a decade of sweet memories', emoji: '🎉' },
-  ]
+const milestones = [
+  { year: '2021', title: 'Launch', desc: 'Started operating as a small mobile ice cream service with a focus on quality and consistency.', emoji: '🚚' },
+  { year: '2022', title: 'First Events', desc: 'Began serving at local events and private bookings, building a loyal customer base.', emoji: '🎪' },
+  { year: '2023', title: 'Menu Expansion', desc: 'Expanded the menu with new flavors, toppings, and drink options.', emoji: '🍦' },
+  { year: '2024', title: 'Growing Demand', desc: 'Increased bookings and presence in high-traffic locations and community events.', emoji: '📈' },
+  { year: '2025', title: 'Brand Development', desc: 'Improved branding, customer experience, and digital presence.', emoji: '💻' },
+  { year: '2026', title: 'Today', desc: 'Continuing to grow while focusing on quality, service, and customer satisfaction.', emoji: '⭐' },
+]
 
   const values = [
-    {
-      icon: '🌊',
-      title: 'Ocean Conservation',
-      desc: 'We donate 5% of profits to ocean cleanup initiatives and marine life protection.',
-    },
-    {
-      icon: '🍦',
-      title: 'Quality Ingredients',
-      desc: 'Only the freshest, highest-quality ingredients go into every scoop we serve.',
-    },
-    {
-      icon: '😊',
-      title: 'Community First',
-      desc: 'We believe in bringing people together through the joy of ice cream.',
-    },
-    {
-      icon: '♻️',
-      title: 'Sustainability',
-      desc: 'Eco-friendly packaging, local sourcing, and zero-waste goals drive everything we do.',
-    },
-  ]
+  {
+    icon: '🍦',
+    title: 'Quality First',
+    desc: 'We focus on serving fresh, consistent products that customers can trust every time.',
+  },
+  {
+    icon: '🤝',
+    title: 'Customer Experience',
+    desc: 'Friendly service and a smooth experience are at the center of everything we do.',
+  },
+  {
+    icon: '⚡',
+    title: 'Efficiency',
+    desc: 'Fast service without compromising quality, especially during busy events and peak hours.',
+  },
+  {
+    icon: '📍',
+    title: 'Local Presence',
+    desc: 'We operate close to our community, serving events, gatherings, and everyday customers.',
+  },
+]
 
   return (
     <div className="about-page">
@@ -69,23 +69,24 @@ const About = () => {
               </svg>
             </div>
           </div>
-          <div className="story-text">
-            <h2>How It All Started</h2>
-            <p>
-              It all began on a hot summer day in 2021 when our founder, dreaming of a world 
-              where every neighborhood could enjoy premium ice cream, decided to turn an old 
-              delivery truck into a magical mobile dessert shop.
-            </p>
-            <p>
-              Inspired by the wonder of the underwater world, we created Cool Ice Cream Truck. 
-              Our mission was simple: bring joy, one scoop at a time, while celebrating the 
-              beauty of our oceans.
-            </p>
-            <p>
-              Today, we are proud to be a beloved part of the community, serving up smiles at 
-              birthday parties, festivals, and quiet afternoons at the park.
-            </p>
-          </div>
+        <div className="story-text">
+  <h2>How It All Started</h2>
+  <p>
+    Cool Ice Cream started as a simple idea: bring high-quality ice cream directly to people, 
+    wherever they are. What began as a small mobile setup quickly grew thanks to word of mouth, 
+    repeat customers, and a strong focus on consistency and service.
+  </p>
+  <p>
+    From day one, the goal has been clear — offer a clean, professional experience with products 
+    people can trust. Every item on the menu is selected carefully, from classic cones to modern 
+    treats, ensuring both quality and variety.
+  </p>
+  <p>
+    Today, Cool Ice Cream operates at events, private bookings, and busy public locations, 
+    serving families, students, and communities. We continue to grow by focusing on what matters: 
+    reliable service, great taste, and a smooth customer experience.
+  </p>
+</div>
         </div>
       </section>
 
