@@ -59,31 +59,68 @@ body {
   text-align: center;
 }
 
-.btn-primary {
-  background: linear-gradient(45deg, #00c6ff, #ffd93d);
-  padding: 12px 20px;
-  border-radius: 12px;
-  color: white;
-  text-decoration: none;
-  display: inline-block;
-}
 .hero-buttons {
   display: flex;
-  gap: 15px;
+  gap: 18px;
   justify-content: center;
-  margin-top: 20px;
-      flex-wrap: nowrap;
-        white-space: nowrap;
+  margin-top: 30px;
+  flex-wrap: wrap;
 }
+
+/* ===== PRIMARY BUTTON (MAIN CTA) ===== */
+.btn-primary {
+  background: linear-gradient(135deg, #00c6ff, #ffd93d);
+  padding: 16px 32px;
+  border-radius: 50px;
+  color: #002b45;
+  font-weight: 800;
+  font-size: 1.05rem;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 8px 25px rgba(0, 198, 255, 0.35);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* glow effect */
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+  transform: translateX(-100%);
+  transition: 0.6s;
+}
+
+.btn-primary:hover::before {
+  transform: translateX(100%);
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 35px rgba(0, 198, 255, 0.5);
+}
+
+/* ===== SECONDARY BUTTON ===== */
 .btn-secondary {
-    text-decoration: none;
-        flex-wrap: nowrap;
-        white-space: nowrap;
-  background: rgba(255,255,255,0.2);
-  padding: 12px 20px;
-  border-radius: 12px;
+  background: rgba(192, 16, 16, 0.12);
+  /* backdrop-filter: blur(12px); */
+  padding: 16px 28px;
+  border-radius: 50px;
   color: white;
-} 
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.25);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(255,255,255,0.15);
+}
 
 .glass {
   background: rgba(255,255,255,0.15);
