@@ -13,7 +13,7 @@ const Contact = () => {
   const socialLinks = [
     { icon: <FaInstagram />, name: 'Instagram', handle: '@coolicecream', link: '#' },
     // { icon: <FaTiktok />, name: 'TikTok', handle: '@coolicecreamtruck', link: '#' },
-    { icon: <FaFacebookF />, name: 'Facebook', handle: 'Cool Ice Cream Truck', link: '#' },
+    { icon: <FaFacebookF />, name: 'Facebook', handle: 'Cool Ice Cream Truck', link: 'https://web.facebook.com/people/Cool-Ice-Cream-More/61589102710334/' },
     // { icon: <FaLinkedinIn />, name: 'LinkedIn', handle: '@coolicecream', link: '#' },
   ]
 

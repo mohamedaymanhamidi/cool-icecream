@@ -1,13 +1,12 @@
+import { FaInstagram, FaFacebookF } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import './Footer.css'
 
 const Footer = () => {
-  const socialLinks = [
-    { name: 'Instagram', icon: '📸', url: '#' },
-    { name: 'TikTok', icon: '🎵', url: '#' },
-    { name: 'Facebook', icon: '👍', url: '#' },
-    { name: 'Linkedin', icon: '🐦', url: '#' },
-  ]
+ const socialLinks = [
+  { name: 'Instagram', icon: <FaInstagram />, url: '#' },
+  { name: 'Facebook', icon: <FaFacebookF />, url: 'https://web.facebook.com/people/Cool-Ice-Cream-More/61589102710334/' },
+]
 
   const quickLinks = [
     { path: '/menu', label: 'Our Menu' },
