@@ -126,7 +126,8 @@
 }
 
 .mascot-card h3 {
-  font-family: var(--font-display);
+  color: white;
+  font-family: var(--white);
   font-size: 1.4rem;
   color: var(--yellow);
   margin-bottom: 12px;

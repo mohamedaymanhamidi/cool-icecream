@@ -36,7 +36,7 @@ const Menu = () => {
     { id: 'drinks', label: 'Ice Drinks & Floats', icon: '🥤', image: pic5 },
     { id: 'smoothies', label: 'Smoothies', icon: '🥤', image: pic6 },
     { id: 'milks', label: 'Milkshakes', icon: '🥛', image: pic7 },
-    { id: 'snowballs', label: 'Snowballs & Ice', icon: '❄️', image: pic8 },
+    { id: 'snowballs', label: 'Snowballs & Shaved Ice', icon: '❄️', image: pic8 },
     { id: 'slushies', label: 'Slushies', icon: '🧊', image: pic9 },
     { id: 'top', label: 'Topping', icon: '✨' },
   ]
@@ -94,7 +94,7 @@ const Menu = () => {
       )}
 
       {/* CTA BUTTON */}
-      {(activeCategory === 'wafflecones' || activeCategory === 'sundaes') && (
+      {(activeCategory === 'wafflecones' || activeCategory === 'sundaes' || activeCategory === 'sundaes') && (
         <div className="topping-cta">
           <button
             className="topping-btn"

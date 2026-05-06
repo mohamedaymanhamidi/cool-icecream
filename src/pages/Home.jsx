@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 import './Home.css'
 import pic1 from '../assets/con.png'
 import pic2 from '../assets/wflc.png'
-import pic3 from '../assets/iced.png'
-import pic4 from '../assets/mlks2.png'
+import pic3 from '../assets/snd.png'
+import pic4 from '../assets/shic.png'
 
 const Home = () => {
   const heroRef = useRef(null)

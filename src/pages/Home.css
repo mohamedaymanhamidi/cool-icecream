@@ -1,3 +1,18 @@
+/* FEATURES SECTION */
+.features-section,
+.features-section h2,
+.features-section h3,
+.features-section p {
+  color: #ffffff;
+}
+
+/* TESTIMONIALS SECTION */
+.testimonials-section,
+.testimonials-section h2,
+.testimonials-section h4,
+.testimonials-section p {
+  color: #ffffff;
+}
 .home-page {
   position: relative;
   overflow-x: hidden;
